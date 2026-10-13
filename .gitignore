@@ -1,0 +1,6 @@
+
+# Third-party market reports / generated offers - never commit
+*.pdf
+*.xlsx
+*.xls
+*.csv

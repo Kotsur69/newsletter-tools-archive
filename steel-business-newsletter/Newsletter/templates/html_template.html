@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Steel Market Update</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif; background-color:#f4f4f4; margin:0; padding:0;">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+
+<!-- CONTAINER -->
+<table width="700" cellpadding="0" cellspacing="0" style="background-color:#ffffff; padding:24px;">
+
+<!-- HEADER -->
+<tr>
+<td style="border-bottom:2px solid #e0e0e0; padding-bottom:16px;">
+  <h2 style="margin:0; color:#333333;">Steel Market Update</h2>
+  <p style="margin:4px 0 0 0; color:#777777; font-size:13px;">
+    Weekly insights & key developments
+  </p>
+</td>
+</tr>
+
+<!-- EXECUTIVE SUMMARY -->
+<tr>
+<td style="padding-top:20px;">
+  <h3 style="color:#1f4e79;">Executive Summary</h3>
+  <p style="color:#333333; font-size:14px; line-height:1.5;">
+    {{ executive_summary }}
+  </p>
+</td>
+</tr>
+
+<!-- KEY INSIGHTS -->
+<tr>
+<td style="padding-top:20px;">
+  <h3 style="color:#1f4e79;">Key Insights</h3>
+  <ul style="font-size:14px; color:#333333;">
+    {% for insight in key_insights %}
+      <li style="margin-bottom:6px;">{{ insight }}</li>
+    {% endfor %}
+  </ul>
+</td>
+</tr>
+
+<!-- MARKET HIGHLIGHTS -->
+<tr>
+<td style="padding-top:20px;">
+  <h3 style="color:#1f4e79;">Market Highlights</h3>
+
+  {% for article in market_highlights %}
+  <p style="margin-bottom:12px;">
+    <strong>{{ article.title }}</strong><br>
+    <span style="font-size:13px; color:#555555;">
+      {{ article.summary }}
+    </span><br>
+    <a href="{{ article.link }}" style="font-size:13px; color:#1f4e79;">
+      Read more
+    </a>
+  </p>
+  {% endfor %}
+
+</td>
+</tr>
+
+<!-- FOOTER -->
+<tr>
+<td style="padding-top:30px; border-top:1px solid #e0e0e0;">
+  <p style="font-size:11px; color:#777777;">
+    Internal use only – ArcelorMittal<br>
+    Generated automatically. Please verify before distribution.
+  </p>
+</td>
+</tr>
+
+</table>
+<!-- END CONTAINER -->
+
+</td>
+</tr>
+</table>
+</body>
+</html>
